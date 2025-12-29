@@ -34,6 +34,7 @@ interface Recipe {
   grindSizeRange: number[];
   chocolate: boolean;
   whippedCream?: boolean;
+  containsAlcohol?: boolean;
   equipment: string[];
   proportions: Record<string, string>;
   instructions: string[];
@@ -96,6 +97,7 @@ export default function Home() {
   const [withMilk, setWithMilk] = useState<boolean | "any">("any");
   const [withChocolate, setWithChocolate] = useState<boolean | "any">("any");
   const [withWhippedCream, setWithWhippedCream] = useState<boolean | "any">("any");
+  const [withAlcohol, setWithAlcohol] = useState<boolean | "any">("any");
   const [temperature, setTemperature] = useState<"hot" | "cold" | "any">("any");
   const [selectedCupType, setSelectedCupType] = useState<string>("any");
   const [grindSize, setGrindSize] = useState<number | "any">("any");
@@ -160,6 +162,7 @@ export default function Home() {
     const matchesMilk = withMilk === "any" || recipe.milk === withMilk;
     const matchesChocolate = withChocolate === "any" || recipe.chocolate === withChocolate;
     const matchesWhippedCream = withWhippedCream === "any" || !!recipe.whippedCream === withWhippedCream;
+    const matchesAlcohol = withAlcohol === "any" || !!recipe.containsAlcohol === withAlcohol;
     const matchesTemp = temperature === "any" || recipe.temperature.includes(temperature);
     const matchesCup = selectedCupType === "any" || recipe.cupTypes.includes(selectedCupType);
     const matchesGrind =
@@ -182,7 +185,7 @@ export default function Home() {
       return false;
     });
 
-    return matchesMilk && matchesChocolate && matchesWhippedCream && matchesTemp && matchesCup && matchesGrind && hasEquipment;
+    return matchesMilk && matchesChocolate && matchesWhippedCream && matchesAlcohol && matchesTemp && matchesCup && matchesGrind && hasEquipment;
   });
 
   const getGrindSizeInfo = (level: number) => {
@@ -421,6 +424,49 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Alcohol Toggle */}
+          <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
+            <div className="mb-3 flex items-center gap-2 text-sm font-medium text-muted-foreground">
+              <Beer className="h-4 w-4" />
+              <span>Alcohol</span>
+            </div>
+            <div className="flex gap-1">
+              <button
+                onClick={() => setWithAlcohol("any")}
+                aria-pressed={withAlcohol === "any"}
+                className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
+                  withAlcohol === "any"
+                    ? "bg-primary text-primary-foreground shadow-md"
+                    : "bg-muted hover:bg-muted/80"
+                }`}
+              >
+                Any
+              </button>
+              <button
+                onClick={() => setWithAlcohol(false)}
+                aria-pressed={withAlcohol === false}
+                className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
+                  withAlcohol === false
+                    ? "bg-primary text-primary-foreground shadow-md"
+                    : "bg-muted hover:bg-muted/80"
+                }`}
+              >
+                No
+              </button>
+              <button
+                onClick={() => setWithAlcohol(true)}
+                aria-pressed={withAlcohol === true}
+                className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
+                  withAlcohol === true
+                    ? "bg-primary text-primary-foreground shadow-md"
+                    : "bg-muted hover:bg-muted/80"
+                }`}
+              >
+                Yes!
+              </button>
+            </div>
+          </div>
+
           {/* Temperature Toggle */}
           <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
             <div className="mb-3 flex items-center gap-2 text-sm font-medium text-muted-foreground">
@@ -600,6 +646,9 @@ export default function Home() {
             </span>
             <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               {withWhippedCream === "any" ? "Any Cream" : withWhippedCream ? "🍦 Whipped Cream" : "No Cream"}
+            </span>
+            <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              {withAlcohol === "any" ? "Any Alcohol" : withAlcohol ? "🍷 Contains Alcohol" : "No Alcohol"}
             </span>
             <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               {temperature === "any" ? "Any Temp" : temperature === "hot" ? "🔥 Hot" : "❄️ Cold"}

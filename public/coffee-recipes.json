@@ -781,6 +781,7 @@
       "description": "Hot coffee with Irish whiskey and cream",
       "milk": true,
       "chocolate": false,
+      "containsAlcohol": true,
       "equipment": [],
       "temperature": ["hot"],
       "cupTypes": ["traditional", "mug", "glass"],
@@ -799,6 +800,1043 @@
         "Do not stir - drink through cream"
       ],
       "brewTime": "5 minutes"
+    },
+    {
+      "id": "espresso-martini",
+      "name": "Espresso Martini",
+      "description": "A cold, caffeinated alcoholic cocktail made with espresso, coffee liqueur, and vodka",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine", "shaker"],
+      "temperature": ["cold"],
+      "cupTypes": ["glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "vodka": "30ml",
+        "coffeeLiqueur": "30ml",
+        "sugarSyrup": "15ml"
+      },
+      "instructions": [
+        "Brew espresso and let it cool slightly",
+        "Add espresso, vodka, coffee liqueur, and syrup to shaker with ice",
+        "Shake vigorously",
+        "Strain into a chilled martini glass",
+        "Garnish with 3 coffee beans"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "white-russian-coffee",
+      "name": "White Russian Coffee",
+      "description": "A hot twist on the classic cocktail with coffee, vodka, and cream",
+      "milk": true,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine", "french-press"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "glass"],
+      "grindSizeRange": [3, 6],
+      "proportions": {
+        "coffee": "150ml strong brewed coffee",
+        "vodka": "30ml",
+        "coffeeLiqueur": "30ml",
+        "cream": "30ml heavy cream"
+      },
+      "instructions": [
+        "Brew strong coffee",
+        "Add vodka and coffee liqueur to mug",
+        "Pour in hot coffee",
+        "Top with heavy cream or whipped cream"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "carajillo",
+      "name": "Carajillo",
+      "description": "Spanish drink combining coffee with brandy, whisky, or anisette",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["demitasse", "glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "alcohol": "30ml Liquor 43 or Brandy"
+      },
+      "instructions": [
+        "Brew espresso",
+        "Pour liquor into glass (can be served over ice)",
+        "Float espresso on top"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "cafe-corretto",
+      "name": "Caffè Corretto",
+      "description": "Italian espresso 'corrected' with a small amount of liquor",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "alcohol": "15-20ml Grappa, Sambuca, or Brandy"
+      },
+      "instructions": [
+        "Brew espresso",
+        "Add liquor directly to the cup or serve on side"
+      ],
+      "brewTime": "2 minutes"
+    },
+    {
+      "id": "spanish-coffee",
+      "name": "Spanish Coffee",
+      "description": "Flaming rum-based coffee cocktail",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine", "french-press"],
+      "temperature": ["hot"],
+      "cupTypes": ["glass", "mug"],
+      "grindSizeRange": [3, 6],
+      "proportions": {
+        "coffee": "150ml hot coffee",
+        "rum": "20-30ml overproof rum",
+        "liqueur": "15ml coffee liqueur",
+        "cream": "Whipped cream"
+      },
+      "instructions": [
+        "Rim glass with sugar and lemon",
+        "Add rum and light it on fire to caramelize sugar",
+        "Add coffee liqueur and hot coffee",
+        "Top with whipped cream and nutmeg"
+      ],
+      "brewTime": "5-8 minutes"
+    },
+    {
+      "id": "cafe-de-olla",
+      "name": "Café de Olla",
+      "description": "Traditional Mexican coffee brewed with cinnamon and piloncillo",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["saucepan"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "traditional"],
+      "grindSizeRange": [5, 6],
+      "proportions": {
+        "coffee": "40g coarse ground",
+        "water": "1 liter",
+        "sugar": "Piloncillo cone",
+        "spice": "1 cinnamon stick"
+      },
+      "instructions": [
+        "Boil water with cinnamon and piloncillo",
+        "Add coffee grounds and remove from heat",
+        "Steep for 5-10 minutes covered",
+        "Strain before serving"
+      ],
+      "brewTime": "10-15 minutes"
+    },
+    {
+      "id": "south-indian-filter",
+      "name": "South Indian Filter Coffee",
+      "description": "Strong decoction coffee mixed with hot frothy milk and sugar",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["stainless-steel-filter"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "stainless-steel-tumbler"],
+      "grindSizeRange": [2, 3],
+      "proportions": {
+        "coffee": "2-3 tbsp coffee-chicory blend",
+        "milk": "1/2 cup boiling milk",
+        "sugar": "to taste"
+      },
+      "instructions": [
+        "Add coffee powder to upper cup of filter",
+        "Pour boiling water over tamper",
+        "Wait for decoction to drip (15 mins)",
+        "Mix decoction with hot milk and sugar",
+        "Pour back and forth between cup and saucer to froth"
+      ],
+      "brewTime": "15-20 minutes"
+    },
+    {
+      "id": "eiskaffee",
+      "name": "Eiskaffee",
+      "description": "German iced coffee with vanilla ice cream and whipped cream",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine", "french-press"],
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "glass"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "1 cup chilled strong coffee",
+        "iceCream": "2 scoops vanilla",
+        "cream": "Whipped cream"
+      },
+      "instructions": [
+        "Place ice cream in tall glass",
+        "Pour chilled coffee over ice cream",
+        "Top with whipped cream and chocolate shavings"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "egg-coffee",
+      "name": "Cà Phê Trứng (Egg Coffee)",
+      "description": "Vietnamese coffee topped with airy egg yolk foam",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["phin-filter", "whisk"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "glass"],
+      "grindSizeRange": [2, 3],
+      "proportions": {
+        "coffee": "Strong Vietnamese coffee",
+        "egg": "1 yolk",
+        "condensedMilk": "2 tbsp"
+      },
+      "instructions": [
+        "Brew coffee using phin filter",
+        "Whip egg yolk and condensed milk until frothy and pale",
+        "Pour egg foam gently over hot coffee"
+      ],
+      "brewTime": "10 minutes"
+    },
+    {
+      "id": "einspanner",
+      "name": "Einspänner",
+      "description": "Viennese classic: double espresso topped with lots of whipped cream",
+      "milk": true,
+      "chocolate": false,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["glass", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "cream": "Heavy whipped cream",
+        "sugar": "Powdered sugar"
+      },
+      "instructions": [
+        "Pull double espresso into glass",
+        "Top generously with whipped cream",
+        "Dust with powdered sugar"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "wiener-melange",
+      "name": "Wiener Melange",
+      "description": "Mild coffee with milk, similar to cappuccino but lighter",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso (mild roast)",
+        "milk": "Steamed milk and foam"
+      },
+      "instructions": [
+        "Brew espresso in a large cup",
+        "Add steamed milk and froth",
+        "Ratio is typically 1:1 coffee to milk"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "cafe-au-lait",
+      "name": "Café au Lait",
+      "description": "French breakfast coffee with hot milk",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["french-press", "drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "bowl"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "1 part strong brewed coffee",
+        "milk": "1 part steamed milk"
+      },
+      "instructions": [
+        "Brew strong coffee",
+        "Heat milk (do not froth heavily)",
+        "Pour coffee and milk simultaneously into cup/bowl"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "cafe-con-leche",
+      "name": "Café con Leche",
+      "description": "Spanish coffee with scalded milk",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "moka-pot"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 part strong coffee/espresso",
+        "milk": "1 part scalded milk"
+      },
+      "instructions": [
+        "Brew strong coffee or espresso",
+        "Heat milk until just boiling (scalded)",
+        "Pour milk over coffee"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "breve",
+      "name": "Caffè Breve",
+      "description": "American variation of a latte using steamed half-and-half",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "milk": "Steamed half-and-half"
+      },
+      "instructions": [
+        "Pull espresso shot",
+        "Steam half-and-half until frothy",
+        "Pour over espresso"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "dirty-chai",
+      "name": "Dirty Chai Latte",
+      "description": "Spiced chai tea latte with a shot of espresso",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["mug", "tall"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "tea": "Masala chai concentrate",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Prepare chai tea or use concentrate",
+        "Add shot of espresso",
+        "Top with steamed milk"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "pumpkin-spice-latte",
+      "name": "Pumpkin Spice Latte",
+      "description": "Seasonal favorite with pumpkin spice flavors",
+      "milk": true,
+      "chocolate": false,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["mug", "tall"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1-2 shots espresso",
+        "milk": "Steamed milk",
+        "syrup": "Pumpkin spice syrup"
+      },
+      "instructions": [
+        "Mix syrup and espresso in cup",
+        "Add steamed milk",
+        "Top with whipped cream and pumpkin pie spice"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "espresso-tonic",
+      "name": "Espresso Tonic",
+      "description": "Refreshing iced drink with tonic water and espresso",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "water": "150ml tonic water",
+        "ice": "Full glass"
+      },
+      "instructions": [
+        "Fill glass with ice",
+        "Pour tonic water",
+        "Slowly float espresso on top"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "shakerato",
+      "name": "Caffè Shakerato",
+      "description": "Italian iced coffee shaken with sugar",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "shaker"],
+      "temperature": ["cold"],
+      "cupTypes": ["glass", "martini-glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "sugar": "Simple syrup to taste",
+        "ice": "cubes"
+      },
+      "instructions": [
+        "Combine espresso, sweetener, and ice in shaker",
+        "Shake vigorously for 10-15 seconds",
+        "Strain into glass (frothy top)"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "japanese-iced-coffee",
+      "name": "Japanese Iced Coffee",
+      "description": "Flash-brewed coffee dripped directly onto ice",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["pour-over"],
+      "temperature": ["cold"],
+      "cupTypes": ["glass", "tall"],
+      "grindSizeRange": [3, 4],
+      "proportions": {
+        "coffee": "30g medium-fine",
+        "water": "300ml hot",
+        "ice": "200g in carafe"
+      },
+      "instructions": [
+        "Place ice in carafe",
+        "Brew pour-over directly onto ice",
+        "Swirl to cool instantly"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "bumble-coffee",
+      "name": "Bumble Coffee",
+      "description": "Layers of orange juice and espresso over ice",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "juice": "100ml orange juice",
+        "syrup": "Caramel syrup (optional)"
+      },
+      "instructions": [
+        "Fill glass with ice",
+        "Pour orange juice (and syrup)",
+        "Slowly pour espresso on top to layer"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "dirty-matcha",
+      "name": "Dirty Matcha Latte",
+      "description": "Green tea latte with a shot of espresso",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "whisk"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["tall", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 shot espresso",
+        "tea": "1 tsp matcha powder",
+        "milk": "Steamed or cold milk"
+      },
+      "instructions": [
+        "Whisk matcha with small amount of water",
+        "Add milk (steamed or cold)",
+        "Pour espresso shot on top"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "cafe-borgia",
+      "name": "Caffè Borgia",
+      "description": "Mocha with orange zest and whipped cream",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine", "drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 4],
+      "proportions": {
+        "coffee": "Strong coffee",
+        "chocolate": "Hot chocolate",
+        "flavor": "Orange zest/syrup"
+      },
+      "instructions": [
+        "Mix equal parts coffee and hot chocolate",
+        "Stir in orange zest or syrup",
+        "Top with whipped cream and more zest"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "honey-lavender-latte",
+      "name": "Honey Lavender Latte",
+      "description": "Floral and sweet latte",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "milk": "Steamed milk",
+        "syrup": "Honey and lavender syrup"
+      },
+      "instructions": [
+        "Brew espresso over honey and lavender syrup",
+        "Stir to dissolve",
+        "Add steamed milk"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "salted-caramel-latte",
+      "name": "Salted Caramel Latte",
+      "description": "Sweet and salty flavored latte",
+      "milk": true,
+      "chocolate": false,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "milk": "Steamed milk",
+        "syrup": "Caramel sauce + sea salt"
+      },
+      "instructions": [
+        "Mix caramel sauce and salt with espresso",
+        "Pour in steamed milk",
+        "Top with foam or whipped cream and caramel drizzle"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "cardamom-coffee",
+      "name": "Cardamom Coffee",
+      "description": "Coffee brewed with cardamom pods, common in Middle East",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["ibrik", "saucepan"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 1],
+      "proportions": {
+        "coffee": "Fine grind coffee",
+        "spice": "Crushed cardamom pods"
+      },
+      "instructions": [
+        "Add water, sugar, and cardamom to pot",
+        "Boil then add coffee",
+        "Return to boil twice",
+        "Serve unstrained (allow grounds to settle)"
+      ],
+      "brewTime": "5-7 minutes"
+    },
+    {
+      "id": "qahwa",
+      "name": "Arabic Coffee (Qahwa)",
+      "description": "Light roast coffee with cardamom and saffron",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["saucepan", "flask"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [5, 6],
+      "proportions": {
+        "coffee": "Light roast ground coffee",
+        "spice": "Cardamom, cloves, saffron"
+      },
+      "instructions": [
+        "Boil water, add coffee, simmer 10 mins",
+        "Add spices, simmer 5 more mins",
+        "Strain into flask (dallah)"
+      ],
+      "brewTime": "15-20 minutes"
+    },
+    {
+      "id": "pharisaer",
+      "name": "Pharisäer",
+      "description": "German coffee with rum and whipped cream",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine", "french-press"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "glass"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Strong black coffee",
+        "alcohol": "40ml Rum",
+        "sugar": "Cube sugar"
+      },
+      "instructions": [
+        "Dissolve sugar in hot coffee",
+        "Add rum",
+        "Top with whipped cream (do not stir)"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "rudesheimer",
+      "name": "Rüdesheimer Kaffee",
+      "description": "German coffee with Asbach Uralt brandy",
+      "milk": false,
+      "chocolate": true,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["glass"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Hot strong coffee",
+        "alcohol": "Asbach Uralt brandy",
+        "sugar": "Sugar cubes"
+      },
+      "instructions": [
+        "Place sugar and brandy in cup, flame it",
+        "Pour in hot coffee",
+        "Top with vanilla whipped cream and chocolate flakes"
+      ],
+      "brewTime": "6 minutes"
+    },
+    {
+      "id": "cafe-brulot",
+      "name": "Café Brulot",
+      "description": "New Orleans spiced flaming coffee cocktail",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["saucepan"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Strong hot coffee",
+        "alcohol": "Brandy/Cognac",
+        "spice": "Cinnamon, cloves, orange peel"
+      },
+      "instructions": [
+        "Heat spices, peel, sugar, and brandy",
+        "Ignite brandy",
+        "Pour hot coffee into the flaming mixture",
+        "Ladle into cups"
+      ],
+      "brewTime": "10 minutes"
+    },
+    {
+      "id": "gunfire",
+      "name": "Gunfire",
+      "description": "British Army cocktail of black tea or coffee with rum",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Hot black coffee",
+        "alcohol": "Shot of rum"
+      },
+      "instructions": [
+        "Brew hot coffee",
+        "Mix in rum",
+        "Drink immediately"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "kaffeekask",
+      "name": "Kaffekask",
+      "description": "Swedish coffee with vodka or aquavit",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Hot coffee",
+        "alcohol": "Vodka or Aquavit"
+      },
+      "instructions": [
+        "Place coin in cup",
+        "Add coffee until coin is hidden",
+        "Add clear liquor until coin is visible again (traditional folklore method)",
+        "Or just mix to taste"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "barraquito",
+      "name": "Barraquito",
+      "description": "Canary Islands multi-layered coffee liqueur drink",
+      "milk": true,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Espresso",
+        "milk": "Condensed milk + frothed milk",
+        "alcohol": "Licor 43",
+        "garnish": "Lemon peel, cinnamon"
+      },
+      "instructions": [
+        "Layer: Condensed milk",
+        "Layer: Licor 43",
+        "Layer: Espresso",
+        "Layer: Frothed milk",
+        "Garnish with cinnamon and lemon peel"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "asiatico",
+      "name": "Asiático",
+      "description": "Coffee from Cartagena, Spain with condensed milk and brandy",
+      "milk": true,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Espresso",
+        "milk": "Condensed milk",
+        "alcohol": "Brandy + Licor 43"
+      },
+      "instructions": [
+        "Pour condensed milk",
+        "Add brandy and Licor 43",
+        "Add espresso",
+        "Add few coffee beans, lemon rind, cinnamon"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "cafe-savoy",
+      "name": "Café Savoy",
+      "description": "Slovakian coffee with egg yolk, sugar, and rum/brandy",
+      "milk": true,
+      "chocolate": true,
+      "containsAlcohol": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Espresso",
+        "milk": "Steamed milk",
+        "other": "Egg yolk, sugar, chocolate",
+        "alcohol": "Splash of rum/brandy"
+      },
+      "instructions": [
+        "Whisk yolk and sugar",
+        "Pour espresso over it",
+        "Add steamed milk and alcohol",
+        "Garnish with chocolate"
+      ],
+      "brewTime": "6 minutes"
+    },
+    {
+      "id": "normandy-coffee",
+      "name": "Normandy Coffee",
+      "description": "Coffee with Calvados (apple brandy)",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Hot coffee",
+        "alcohol": "Calvados",
+        "sugar": "Brown sugar"
+      },
+      "instructions": [
+        "Add Calvados and sugar to mug",
+        "Pour in coffee",
+        "Top with whipped cream"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "amaretto-coffee",
+      "name": "Amaretto Coffee",
+      "description": "Coffee with almond-flavored Amaretto liqueur",
+      "milk": false,
+      "chocolate": false,
+      "containsAlcohol": true,
+      "whippedCream": true,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "Hot coffee",
+        "alcohol": "Amaretto liqueur",
+        "cream": "Whipped cream"
+      },
+      "instructions": [
+        "Mix coffee and Amaretto",
+        "Top with whipped cream",
+        "Garnish with toasted almonds"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "maple-pecan-latte",
+      "name": "Maple Pecan Latte",
+      "description": "Nutty and sweet latte with maple syrup",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Espresso",
+        "milk": "Steamed milk",
+        "syrup": "Maple syrup, pecan syrup"
+      },
+      "instructions": [
+        "Add syrups to espresso",
+        "Pour steamed milk",
+        "Top with crushed pecans"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "cortadito",
+      "name": "Cortadito",
+      "description": "Cuban espresso cut with steamed milk",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["moka-pot", "espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Cuban espresso",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Brew strong Cuban espresso with sugar",
+        "Add equal part steamed milk"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "cafe-cubano",
+      "name": "Café Cubano",
+      "description": "Strong espresso whipped with sugar to create 'espumita'",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["moka-pot", "espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Espresso roast",
+        "sugar": "Demerara sugar (generous amount)"
+      },
+      "instructions": [
+        "Brew first few drops of espresso",
+        "Whip vigorously with sugar to create thick foam",
+        "Pour remaining coffee over foam",
+        "Mix and serve"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "cafe-zorro",
+      "name": "Café Zorro",
+      "description": "A double shot of espresso diluted 1:1 with hot water",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "water": "Equal part hot water"
+      },
+      "instructions": [
+        "Pull double espresso",
+        "Add equal amount of hot water",
+        "Stronger than Americano"
+      ],
+      "brewTime": "2 minutes"
+    },
+    {
+      "id": "white-chocolate-mocha",
+      "name": "White Chocolate Mocha",
+      "description": "Sweet and creamy espresso drink with white chocolate sauce",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine", "milk-frother"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["tall", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "chocolate": "30ml white chocolate sauce",
+        "milk": "150ml steamed",
+        "whippedCream": "topping"
+      },
+      "instructions": [
+        "Add white chocolate sauce to cup",
+        "Pull double shot of espresso over sauce",
+        "Stir to combine",
+        "Add steamed milk and foam",
+        "Top with whipped cream"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "mexican-mocha",
+      "name": "Mexican Spiced Mocha",
+      "description": "Rich chocolate coffee spiced with cinnamon and a hint of chili",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine", "milk-frother"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "chocolate": "Mexican chocolate or cocoa",
+        "spice": "Cinnamon & pinch of cayenne",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Mix chocolate and spices with espresso",
+        "Pour in steamed milk",
+        "Top with whipped cream and dusting of cinnamon"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "black-forest-mocha",
+      "name": "Black Forest Mocha",
+      "description": "Decadent mix of chocolate, cherry, and coffee flavors",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "chocolate": "Chocolate sauce",
+        "cherry": "Cherry syrup (1 pump)",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Combine chocolate sauce and cherry syrup",
+        "Add espresso and stir",
+        "Top with steamed milk and whipped cream",
+        "Garnish with chocolate shavings or a cherry"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "mint-mocha",
+      "name": "Peppermint Mocha",
+      "description": "Festive blend of cool peppermint and rich chocolate",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["mug", "tall"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "chocolate": "Mocha sauce",
+        "mint": "Peppermint syrup",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Mix mocha sauce and peppermint syrup in cup",
+        "Brew espresso over mixture",
+        "Stir well",
+        "Fill with steamed milk",
+        "Top with whipped cream and crushed candy cane"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "nutella-latte",
+      "name": "Nutella Latte",
+      "description": "Hazelnut and chocolate spread melted into a creamy latte",
+      "milk": true,
+      "chocolate": true,
+      "whippedCream": true,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "bowl"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "Double espresso",
+        "spread": "1-2 tbsp Nutella",
+        "milk": "Steamed milk"
+      },
+      "instructions": [
+        "Put Nutella in bottom of cup",
+        "Pull hot espresso directly onto spread",
+        "Stir vigorously to melt",
+        "Pour steamed milk over mixture"
+      ],
+      "brewTime": "4 minutes"
     }
   ],
   "cupTypes": [
