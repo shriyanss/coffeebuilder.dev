@@ -1,0 +1,525 @@
+{
+  "recipes": [
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "description": "A concentrated shot of coffee with a rich crema",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g",
+        "water": "36ml"
+      },
+      "instructions": [
+        "Grind coffee beans to a fine consistency",
+        "Tamp the grounds evenly in the portafilter",
+        "Extract for 25-30 seconds",
+        "Serve immediately in a warm cup"
+      ],
+      "brewTime": "25-30 seconds"
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "description": "Espresso diluted with hot water for a milder flavor",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["traditional", "tall", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "water": "120-180ml"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Add hot water to desired strength",
+        "For iced version, add cold water and ice"
+      ],
+      "brewTime": "2-3 minutes"
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "description": "Equal parts espresso, steamed milk, and milk foam",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "60ml steamed",
+        "foam": "60ml"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Steam milk to create microfoam",
+        "Pour steamed milk over espresso",
+        "Top with a thick layer of foam",
+        "Optional: dust with cocoa powder"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "latte",
+      "name": "Caffè Latte",
+      "description": "Espresso with steamed milk and a light foam layer",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["tall", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "180-240ml steamed",
+        "foam": "thin layer"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Steam milk until silky smooth",
+        "Pour steamed milk gently over espresso",
+        "Create latte art if desired",
+        "For iced: pour over ice instead"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "flat-white",
+      "name": "Flat White",
+      "description": "Double espresso with velvety steamed milk, less foam than latte",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "120ml microfoam"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Steam milk to create silky microfoam",
+        "Pour milk in a steady stream",
+        "Result should be velvety smooth throughout"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "mocha",
+      "name": "Caffè Mocha",
+      "description": "Espresso with chocolate and steamed milk",
+      "milk": true,
+      "chocolate": true,
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["tall", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "chocolate": "15-30g syrup or powder",
+        "milk": "150ml steamed",
+        "whippedCream": "optional topping"
+      },
+      "instructions": [
+        "Add chocolate syrup to cup",
+        "Pull a double shot of espresso over chocolate",
+        "Stir to combine",
+        "Add steamed milk",
+        "Top with whipped cream if desired"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "marocchino",
+      "name": "Marocchino",
+      "description": "Layers of cocoa powder, espresso, and milk foam",
+      "milk": true,
+      "chocolate": true,
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "chocolate": "Cocoa powder",
+        "foam": "Milk foam to fill"
+      },
+      "instructions": [
+        "Dust the bottom of a small glass cup with cocoa powder",
+        "Pull a shot of espresso over the cocoa",
+        "Dust the espresso with more cocoa powder",
+        "Top with milk froth until the cup is full",
+        "Finish with a final dusting of cocoa"
+      ],
+      "brewTime": "3 minutes"
+    },
+    {
+      "id": "bicerin",
+      "name": "Bicerin",
+      "description": "Traditional Turin drink with espresso, chocolate, and milk",
+      "milk": true,
+      "chocolate": true,
+      "temperature": ["hot"],
+      "cupTypes": ["tall", "traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (espresso)",
+        "chocolate": "50ml hot chocolate",
+        "milk": "50ml whole milk"
+      },
+      "instructions": [
+        "Prepare thick hot chocolate",
+        "Pour hot chocolate into the bottom of a glass",
+        "Carefully layer espresso over the chocolate",
+        "Top with a layer of whole milk or lightly whipped cream",
+        "Do not stir before serving"
+      ],
+      "brewTime": "5-6 minutes"
+    },
+    {
+      "id": "macchiato",
+      "name": "Espresso Macchiato",
+      "description": "Espresso 'stained' with a dollop of milk foam",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "foam": "1-2 tablespoons"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Steam a small amount of milk",
+        "Add a dollop of foam to mark the espresso"
+      ],
+      "brewTime": "2-3 minutes"
+    },
+    {
+      "id": "cortado",
+      "name": "Cortado",
+      "description": "Equal parts espresso and warm milk to reduce acidity",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "30-60ml steamed"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Steam milk with minimal foam",
+        "Pour equal amount of milk into espresso"
+      ],
+      "brewTime": "2-3 minutes"
+    },
+    {
+      "id": "cold-brew",
+      "name": "Cold Brew",
+      "description": "Coffee steeped in cold water for a smooth, less acidic taste",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "mason-jar"],
+      "grindSizeRange": [5, 6],
+      "proportions": {
+        "coffee": "100g coarse ground",
+        "water": "1 liter cold"
+      },
+      "instructions": [
+        "Coarsely grind coffee beans",
+        "Combine coffee and cold water in container",
+        "Steep in refrigerator for 12-24 hours",
+        "Strain through fine mesh or filter",
+        "Dilute concentrate 1:1 with water or milk",
+        "Serve over ice"
+      ],
+      "brewTime": "12-24 hours"
+    },
+    {
+      "id": "iced-latte",
+      "name": "Iced Latte",
+      "description": "Chilled espresso with cold milk over ice",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "mason-jar"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "200ml cold",
+        "ice": "1 cup"
+      },
+      "instructions": [
+        "Fill glass with ice",
+        "Pull a double shot of espresso",
+        "Pour cold milk over ice",
+        "Add espresso over the milk",
+        "Stir gently and serve"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "iced-cappuccino",
+      "name": "Iced Cappuccino",
+      "description": "Chilled espresso with cold frothed milk",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "mason-jar"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "milk": "120ml cold frothed",
+        "ice": "1 cup"
+      },
+      "instructions": [
+        "Fill glass with ice",
+        "Pull a double shot of espresso",
+        "Froth cold milk using a frother",
+        "Pour espresso over ice",
+        "Top with cold frothed milk"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "frappe",
+      "name": "Frappé",
+      "description": "Blended iced coffee with a frothy texture",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "mason-jar"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "2 shots instant or espresso",
+        "milk": "100ml",
+        "ice": "1 cup",
+        "sugar": "to taste"
+      },
+      "instructions": [
+        "Add coffee, milk, ice, and sugar to blender",
+        "Blend until smooth and frothy",
+        "Pour into tall glass",
+        "Top with whipped cream if desired"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "pour-over",
+      "name": "Pour Over",
+      "description": "Manual brewing method for a clean, nuanced cup",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [3, 4],
+      "proportions": {
+        "coffee": "20-25g medium ground",
+        "water": "300-350ml at 93°C"
+      },
+      "instructions": [
+        "Place filter in dripper and rinse with hot water",
+        "Add medium-ground coffee",
+        "Bloom with 50ml water for 30 seconds",
+        "Pour remaining water in slow circles",
+        "Total brew time should be 3-4 minutes"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "french-press",
+      "name": "French Press",
+      "description": "Full-bodied immersion brew with natural oils",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [5, 6],
+      "proportions": {
+        "coffee": "30g coarse ground",
+        "water": "500ml at 93°C"
+      },
+      "instructions": [
+        "Add coarsely ground coffee to press",
+        "Pour hot water and stir briefly",
+        "Place lid on and steep for 4 minutes",
+        "Press plunger down slowly",
+        "Pour immediately to avoid over-extraction"
+      ],
+      "brewTime": "4 minutes"
+    },
+    {
+      "id": "affogato",
+      "name": "Affogato",
+      "description": "Espresso poured over vanilla gelato or ice cream",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["traditional", "demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (single or double shot)",
+        "iceCream": "1-2 scoops vanilla"
+      },
+      "instructions": [
+        "Place scoops of vanilla gelato in cup",
+        "Pull a shot of espresso",
+        "Pour hot espresso directly over gelato",
+        "Serve immediately with a spoon"
+      ],
+      "brewTime": "2 minutes"
+    },
+    {
+      "id": "vietnamese-coffee",
+      "name": "Vietnamese Coffee",
+      "description": "Strong drip coffee with sweetened condensed milk",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["traditional", "tall"],
+      "grindSizeRange": [2, 3],
+      "proportions": {
+        "coffee": "20g medium-fine ground",
+        "condensedMilk": "2-3 tablespoons",
+        "water": "100ml hot"
+      },
+      "instructions": [
+        "Add condensed milk to bottom of glass",
+        "Place phin filter on top of glass",
+        "Add coffee grounds to filter",
+        "Pour small amount of water to bloom",
+        "Fill filter with remaining water",
+        "Wait for coffee to drip through",
+        "Stir and serve hot or over ice"
+      ],
+      "brewTime": "4-5 minutes"
+    },
+    {
+      "id": "nitro-cold-brew",
+      "name": "Nitro Cold Brew",
+      "description": "Cold brew infused with nitrogen for a creamy, stout-like texture",
+      "milk": false,
+      "chocolate": false,
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "mason-jar"],
+      "grindSizeRange": [5, 6],
+      "proportions": {
+        "coldBrew": "200ml concentrate",
+        "nitrogen": "infused on tap"
+      },
+      "instructions": [
+        "Prepare cold brew concentrate",
+        "Charge with nitrogen using a nitro system",
+        "Pour from tap into glass",
+        "Do not add ice - served cold from tap",
+        "Enjoy the cascading effect"
+      ],
+      "brewTime": "Instant (after cold brew prep)"
+    },
+    {
+      "id": "irish-coffee",
+      "name": "Irish Coffee",
+      "description": "Hot coffee with Irish whiskey and cream",
+      "milk": true,
+      "chocolate": false,
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [3, 4],
+      "proportions": {
+        "coffee": "150ml hot brewed",
+        "whiskey": "45ml Irish whiskey",
+        "sugar": "1 teaspoon brown sugar",
+        "cream": "30ml lightly whipped"
+      },
+      "instructions": [
+        "Warm your glass with hot water",
+        "Add brown sugar and whiskey",
+        "Pour in hot coffee and stir",
+        "Float lightly whipped cream on top",
+        "Do not stir - drink through cream"
+      ],
+      "brewTime": "5 minutes"
+    }
+  ],
+  "cupTypes": [
+    {
+      "id": "demitasse",
+      "name": "Demitasse",
+      "description": "Small cup for espresso",
+      "capacity": "60-90ml",
+      "icon": "/cups/demitasse.svg"
+    },
+    {
+      "id": "traditional",
+      "name": "Traditional Cup",
+      "description": "Standard coffee cup",
+      "capacity": "180-240ml",
+      "icon": "/cups/traditional.svg"
+    },
+    {
+      "id": "mug",
+      "name": "Mug",
+      "description": "Large coffee mug",
+      "capacity": "300-350ml",
+      "icon": "/cups/mug.svg"
+    },
+    {
+      "id": "tall",
+      "name": "Tall Glass",
+      "description": "Tall glass for iced drinks",
+      "capacity": "350-450ml",
+      "icon": "/cups/tall.svg"
+    },
+    {
+      "id": "mason-jar",
+      "name": "Mason Jar",
+      "description": "Trendy jar for cold drinks",
+      "capacity": "400-500ml",
+      "icon": "/cups/mason-jar.svg"
+    }
+  ],
+  "grindSizes": [
+    {
+      "level": 1,
+      "name": "Extra Fine",
+      "description": "Powdery, like flour - for Turkish coffee",
+      "bestFor": ["Turkish coffee"]
+    },
+    {
+      "level": 2,
+      "name": "Fine",
+      "description": "Like table salt - for espresso",
+      "bestFor": ["Espresso", "Moka pot"]
+    },
+    {
+      "level": 3,
+      "name": "Medium-Fine",
+      "description": "Finer than sand - for pour over",
+      "bestFor": ["Pour over", "AeroPress"]
+    },
+    {
+      "level": 4,
+      "name": "Medium",
+      "description": "Like sand - for drip coffee",
+      "bestFor": ["Drip coffee", "Siphon"]
+    },
+    {
+      "level": 5,
+      "name": "Medium-Coarse",
+      "description": "Like coarse sand - for Chemex",
+      "bestFor": ["Chemex", "Clever Dripper"]
+    },
+    {
+      "level": 6,
+      "name": "Coarse",
+      "description": "Like sea salt - for French press",
+      "bestFor": ["French press", "Cold brew"]
+    }
+  ]
+}
