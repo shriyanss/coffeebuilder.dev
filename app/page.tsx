@@ -78,6 +78,8 @@ const ALL_EQUIPMENT = [
   { id: "blender", name: "Blender" },
   { id: "phin-filter", name: "Phin Filter" },
   { id: "nitro-system", name: "Nitro System" },
+  { id: "ibrik", name: "Ibrik / Cezve" },
+  { id: "drip-machine", name: "Drip Coffee Maker" },
 ];
 
 export default function Home() {
@@ -96,7 +98,7 @@ export default function Home() {
   const [grindSize, setGrindSize] = useState<number | "any">("any");
 
   const [settings, setSettings] = useState<SettingsConfig>({
-    grindLevels: 6,
+    grindLevels: 7,
     defaultGrindSize: 3,
     availableEquipment: ALL_EQUIPMENT.map(e => e.id),
     mokaSubstitute: true,

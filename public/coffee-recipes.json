@@ -23,6 +23,70 @@
       "brewTime": "25-30 seconds"
     },
     {
+      "id": "doppio",
+      "name": "Doppio",
+      "description": "A double shot of espresso",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "traditional"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18-20g",
+        "water": "60ml"
+      },
+      "instructions": [
+        "Grind coffee beans fine",
+        "Tamp firmly",
+        "Extract for 25-30 seconds",
+        "Serve immediately"
+      ],
+      "brewTime": "25-30 seconds"
+    },
+    {
+      "id": "ristretto",
+      "name": "Ristretto",
+      "description": "A short, restricted shot of espresso - sweeter and more concentrated",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g",
+        "water": "15-20ml"
+      },
+      "instructions": [
+        "Grind coffee beans fine",
+        "Stop extraction early (15-20s)",
+        "Result is thicker and less bitter than espresso"
+      ],
+      "brewTime": "15-20 seconds"
+    },
+    {
+      "id": "lungo",
+      "name": "Lungo",
+      "description": "A 'long' espresso shot with more water extracted",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "traditional"],
+      "grindSizeRange": [2, 3],
+      "proportions": {
+        "coffee": "18g",
+        "water": "90-120ml (through the puck)"
+      },
+      "instructions": [
+        "Grind slightly coarser than espresso",
+        "Extract for longer (40-60s)",
+        "Flavor is milder but more bitter"
+      ],
+      "brewTime": "45-60 seconds"
+    },
+    {
       "id": "americano",
       "name": "Americano",
       "description": "Espresso diluted with hot water for a milder flavor",
@@ -40,6 +104,27 @@
         "Pull a double shot of espresso",
         "Add hot water to desired strength",
         "For iced version, add cold water and ice"
+      ],
+      "brewTime": "2-3 minutes"
+    },
+    {
+      "id": "long-black",
+      "name": "Long Black",
+      "description": "Hot water with espresso poured on top to preserve crema",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["traditional", "mug"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "water": "100-120ml"
+      },
+      "instructions": [
+        "Fill cup with hot water",
+        "Pull double shot of espresso directly onto the water",
+        "Serve immediately to keep crema intact"
       ],
       "brewTime": "2-3 minutes"
     },
@@ -110,6 +195,27 @@
         "Steam milk to create silky microfoam",
         "Pour milk in a steady stream",
         "Result should be velvety smooth throughout"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "galao",
+      "name": "Galão",
+      "description": "Portuguese drink with espresso and plenty of foamed milk",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "milk-frother"],
+      "temperature": ["hot"],
+      "cupTypes": ["tall"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 part espresso",
+        "milk": "3 parts foamed milk"
+      },
+      "instructions": [
+        "Brew espresso into a tall glass",
+        "Fill the rest of the glass with hot foamed milk",
+        "Similar to a latte but with lighter coffee ratio"
       ],
       "brewTime": "3-4 minutes"
     },
@@ -187,6 +293,27 @@
       "brewTime": "5-6 minutes"
     },
     {
+      "id": "cafe-bombon",
+      "name": "Café Bombón",
+      "description": "Espresso served over sweetened condensed milk",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse", "glass"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "1 part espresso",
+        "milk": "1 part condensed milk"
+      },
+      "instructions": [
+        "Pour condensed milk into a small glass",
+        "Slowly pour espresso on top to create a layer",
+        "Stir before drinking"
+      ],
+      "brewTime": "2 minutes"
+    },
+    {
       "id": "macchiato",
       "name": "Espresso Macchiato",
       "description": "Espresso 'stained' with a dollop of milk foam",
@@ -206,6 +333,27 @@
         "Add a dollop of foam to mark the espresso"
       ],
       "brewTime": "2-3 minutes"
+    },
+    {
+      "id": "espresso-con-panna",
+      "name": "Espresso Con Panna",
+      "description": "Espresso topped with whipped cream",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["espresso-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["demitasse"],
+      "grindSizeRange": [1, 2],
+      "proportions": {
+        "coffee": "18g (double shot)",
+        "cream": "Dollop of whipped cream"
+      },
+      "instructions": [
+        "Pull a double shot of espresso",
+        "Top with a generous dollop of whipped cream",
+        "Serve immediately"
+      ],
+      "brewTime": "2 minutes"
     },
     {
       "id": "cortado",
@@ -229,6 +377,141 @@
       "brewTime": "2-3 minutes"
     },
     {
+      "id": "red-eye",
+      "name": "Red Eye",
+      "description": "Drip coffee with a shot of espresso",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 4],
+      "proportions": {
+        "coffee": "1 cup drip coffee",
+        "espresso": "1 shot"
+      },
+      "instructions": [
+        "Brew a cup of drip coffee",
+        "Pull a shot of espresso",
+        "Pour espresso into the coffee"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "black-eye",
+      "name": "Black Eye",
+      "description": "Drip coffee with two shots of espresso",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 4],
+      "proportions": {
+        "coffee": "1 cup drip coffee",
+        "espresso": "2 shots"
+      },
+      "instructions": [
+        "Brew a cup of drip coffee",
+        "Pull two shots of espresso",
+        "Pour espresso into the coffee"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "dead-eye",
+      "name": "Dead Eye",
+      "description": "Drip coffee with three shots of espresso - very high caffeine",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [1, 4],
+      "proportions": {
+        "coffee": "1 cup drip coffee",
+        "espresso": "3 shots"
+      },
+      "instructions": [
+        "Brew a cup of drip coffee",
+        "Pull three shots of espresso",
+        "Pour espresso into the coffee",
+        "Drink with caution!"
+      ],
+      "brewTime": "6 minutes"
+    },
+    {
+      "id": "turkish-coffee",
+      "name": "Turkish Coffee",
+      "description": "Unfiltered coffee brewed in an ibrik with sugar",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["ibrik"],
+      "temperature": ["hot"],
+      "cupTypes": ["turkish-cup", "demitasse"],
+      "grindSizeRange": [1, 1],
+      "proportions": {
+        "coffee": "7g extra fine",
+        "water": "60ml",
+        "sugar": "optional"
+      },
+      "instructions": [
+        "Combine cold water, sugar, and coffee in ibrik",
+        "Stir until combined",
+        "Heat on medium-low until foam rises",
+        "Remove from heat, scoop foam into cup",
+        "Return to heat until foam rises again",
+        "Pour into cup slowly"
+      ],
+      "brewTime": "3-4 minutes"
+    },
+    {
+      "id": "drip-coffee",
+      "name": "Drip Coffee",
+      "description": "Standard automatic filter coffee",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["drip-machine"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug", "traditional"],
+      "grindSizeRange": [4, 4],
+      "proportions": {
+        "coffee": "30g",
+        "water": "500ml"
+      },
+      "instructions": [
+        "Place filter in machine",
+        "Add medium grind coffee",
+        "Fill reservoir with water",
+        "Start brewing cycle",
+        "Wait until dripping stops"
+      ],
+      "brewTime": "5-6 minutes"
+    },
+    {
+      "id": "bulletproof",
+      "name": "Bulletproof Coffee",
+      "description": "Coffee blended with butter and MCT oil",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["drip-machine", "french-press", "blender"],
+      "temperature": ["hot"],
+      "cupTypes": ["mug"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "1 cup strong brewed",
+        "butter": "1-2 tbsp grass-fed butter",
+        "oil": "1 tbsp MCT oil"
+      },
+      "instructions": [
+        "Brew coffee (drip or french press)",
+        "Add coffee, butter, and oil to blender",
+        "Blend for 20-30 seconds until creamy",
+        "Serve immediately"
+      ],
+      "brewTime": "5-6 minutes"
+    },
+    {
       "id": "cold-brew",
       "name": "Cold Brew",
       "description": "Coffee steeped in cold water for a smooth, less acidic taste",
@@ -236,10 +519,10 @@
       "chocolate": false,
       "equipment": [],
       "temperature": ["cold"],
-      "cupTypes": ["tall", "mason-jar"],
-      "grindSizeRange": [5, 6],
+      "cupTypes": ["tall", "mason-jar", "glass"],
+      "grindSizeRange": [6, 7],
       "proportions": {
-        "coffee": "100g coarse ground",
+        "coffee": "100g coarse/extra-coarse ground",
         "water": "1 liter cold"
       },
       "instructions": [
@@ -260,7 +543,7 @@
       "chocolate": false,
       "equipment": ["espresso-machine"],
       "temperature": ["cold"],
-      "cupTypes": ["tall", "mason-jar"],
+      "cupTypes": ["tall", "mason-jar", "glass"],
       "grindSizeRange": [1, 2],
       "proportions": {
         "coffee": "18g (double shot)",
@@ -284,7 +567,7 @@
       "chocolate": false,
       "equipment": ["espresso-machine", "milk-frother"],
       "temperature": ["cold"],
-      "cupTypes": ["tall", "mason-jar"],
+      "cupTypes": ["tall", "mason-jar", "glass"],
       "grindSizeRange": [1, 2],
       "proportions": {
         "coffee": "18g (double shot)",
@@ -301,6 +584,53 @@
       "brewTime": "3-4 minutes"
     },
     {
+      "id": "mazagran",
+      "name": "Mazagran",
+      "description": "Iced coffee with lemon, often called the 'original iced coffee'",
+      "milk": false,
+      "chocolate": false,
+      "equipment": ["espresso-machine", "french-press"],
+      "temperature": ["cold"],
+      "cupTypes": ["tall", "glass"],
+      "grindSizeRange": [1, 6],
+      "proportions": {
+        "coffee": "Strong coffee or espresso",
+        "lemon": "Juice of 1/2 lemon",
+        "ice": "1 cup",
+        "sugar": "to taste"
+      },
+      "instructions": [
+        "Brew strong coffee and let cool",
+        "Fill glass with ice",
+        "Mix coffee with lemon juice and sugar",
+        "Pour over ice",
+        "Garnish with lemon slice"
+      ],
+      "brewTime": "5 minutes"
+    },
+    {
+      "id": "yuanyang",
+      "name": "Yuanyang",
+      "description": "Popular Hong Kong drink mixing coffee and milk tea",
+      "milk": true,
+      "chocolate": false,
+      "equipment": ["drip-machine", "french-press"],
+      "temperature": ["hot", "cold"],
+      "cupTypes": ["traditional", "mug", "glass"],
+      "grindSizeRange": [4, 6],
+      "proportions": {
+        "coffee": "1 part strong coffee",
+        "tea": "1 part Hong Kong milk tea"
+      },
+      "instructions": [
+        "Brew strong coffee",
+        "Brew strong black tea and mix with condensed milk",
+        "Mix coffee and milk tea together (ratio can vary)",
+        "Serve hot or over ice"
+      ],
+      "brewTime": "10 minutes"
+    },
+    {
       "id": "frappe",
       "name": "Frappé",
       "description": "Blended iced coffee with a frothy texture",
@@ -308,7 +638,7 @@
       "chocolate": false,
       "equipment": ["blender"],
       "temperature": ["cold"],
-      "cupTypes": ["tall", "mason-jar"],
+      "cupTypes": ["tall", "mason-jar", "glass"],
       "grindSizeRange": [1, 2],
       "proportions": {
         "coffee": "2 shots instant or espresso",
@@ -378,7 +708,7 @@
       "chocolate": false,
       "equipment": ["espresso-machine"],
       "temperature": ["hot", "cold"],
-      "cupTypes": ["traditional", "demitasse"],
+      "cupTypes": ["traditional", "demitasse", "glass"],
       "grindSizeRange": [1, 2],
       "proportions": {
         "coffee": "18g (single or double shot)",
@@ -400,7 +730,7 @@
       "chocolate": false,
       "equipment": ["phin-filter"],
       "temperature": ["hot", "cold"],
-      "cupTypes": ["traditional", "tall"],
+      "cupTypes": ["traditional", "tall", "glass"],
       "grindSizeRange": [2, 3],
       "proportions": {
         "coffee": "20g medium-fine ground",
@@ -426,7 +756,7 @@
       "chocolate": false,
       "equipment": ["nitro-system"],
       "temperature": ["cold"],
-      "cupTypes": ["tall", "mason-jar"],
+      "cupTypes": ["tall", "mason-jar", "glass"],
       "grindSizeRange": [5, 6],
       "proportions": {
         "coldBrew": "200ml concentrate",
@@ -449,7 +779,7 @@
       "chocolate": false,
       "equipment": [],
       "temperature": ["hot"],
-      "cupTypes": ["traditional", "mug"],
+      "cupTypes": ["traditional", "mug", "glass"],
       "grindSizeRange": [3, 4],
       "proportions": {
         "coffee": "150ml hot brewed",
@@ -476,6 +806,13 @@
       "icon": "/cups/demitasse.svg"
     },
     {
+      "id": "turkish-cup",
+      "name": "Fincan (Turkish)",
+      "description": "Tiny porcelain cup for Turkish coffee",
+      "capacity": "60-80ml",
+      "icon": "/cups/demitasse.svg"
+    },
+    {
       "id": "traditional",
       "name": "Traditional Cup",
       "description": "Standard coffee cup",
@@ -488,6 +825,13 @@
       "description": "Large coffee mug",
       "capacity": "300-350ml",
       "icon": "/cups/mug.svg"
+    },
+    {
+      "id": "glass",
+      "name": "Glass Cup",
+      "description": "Clear glass for layered drinks",
+      "capacity": "200-300ml",
+      "icon": "/cups/tall.svg"
     },
     {
       "id": "tall",
@@ -540,6 +884,12 @@
       "name": "Coarse",
       "description": "Like sea salt - for French press",
       "bestFor": ["French press", "Cold brew"]
+    },
+    {
+      "level": 7,
+      "name": "Extra Coarse",
+      "description": "Like peppercorns - for Cold Brew",
+      "bestFor": ["Cold brew"]
     }
   ]
 }
