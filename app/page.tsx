@@ -685,7 +685,7 @@ export default function Home() {
                 <span>Settings</span>
               </button>
               <a
-                href="https://github.com"
+                href="https://github.com/shriyanss/coffeebuilder.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left transition-colors hover:bg-muted"
