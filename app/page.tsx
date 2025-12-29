@@ -197,6 +197,31 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "Coffee Builder",
+            url: "https://coffeebuilder.dev",
+            description:
+              "Discover and build your perfect coffee based on your preferences. Choose grind size, milk, temperature, and cup type.",
+            applicationCategory: "FoodDrink",
+            operatingSystem: "Any",
+            featureList: "Coffee Recipes, Grind Size Guide, Equipment Filtering",
+            author: {
+              "@type": "Organization",
+              name: "Coffee Builder Team",
+            },
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
@@ -260,6 +285,7 @@ export default function Home() {
             <div className="flex gap-1">
               <button
                 onClick={() => setWithMilk("any")}
+                aria-pressed={withMilk === "any"}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withMilk === "any"
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -270,6 +296,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setWithMilk(false)}
+                aria-pressed={withMilk === false}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withMilk === false
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -280,6 +307,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setWithMilk(true)}
+                aria-pressed={withMilk === true}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withMilk === true
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -300,6 +328,7 @@ export default function Home() {
             <div className="flex gap-1">
               <button
                 onClick={() => setWithChocolate("any")}
+                aria-pressed={withChocolate === "any"}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withChocolate === "any"
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -310,6 +339,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setWithChocolate(false)}
+                aria-pressed={withChocolate === false}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withChocolate === false
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -320,6 +350,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setWithChocolate(true)}
+                aria-pressed={withChocolate === true}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   withChocolate === true
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -340,6 +371,7 @@ export default function Home() {
             <div className="flex gap-1">
               <button
                 onClick={() => setTemperature("any")}
+                aria-pressed={temperature === "any"}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   temperature === "any"
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -350,6 +382,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setTemperature("hot")}
+                aria-pressed={temperature === "hot"}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   temperature === "hot"
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -360,6 +393,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => setTemperature("cold")}
+                aria-pressed={temperature === "cold"}
                 className={`flex-1 rounded-lg px-2 py-2 text-sm font-medium transition-all ${
                   temperature === "cold"
                     ? "bg-primary text-primary-foreground shadow-md"
@@ -533,13 +567,14 @@ export default function Home() {
                   key={recipe.id}
                   className="overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md"
                 >
-                  <div
-                    className="cursor-pointer p-4"
+                  <button
+                    className="w-full cursor-pointer p-4 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
                     onClick={() =>
                       setExpandedRecipe(
                         expandedRecipe === recipe.id ? null : recipe.id
                       )
                     }
+                    aria-expanded={expandedRecipe === recipe.id}
                   >
                     <div className="mb-2 flex items-start justify-between">
                       <h3 className="text-lg font-semibold">{recipe.name}</h3>
@@ -556,7 +591,7 @@ export default function Home() {
                       <Clock className="h-3 w-3" />
                       <span>{recipe.brewTime}</span>
                     </div>
-                  </div>
+                  </button>
 
                   {expandedRecipe === recipe.id && (
                     <div className="border-t border-border bg-muted/30 p-4">
