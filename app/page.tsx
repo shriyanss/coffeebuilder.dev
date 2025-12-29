@@ -104,6 +104,15 @@ export default function Home() {
     mokaSubstitute: true,
   });
 
+  const STANDARD_GRIND_LEVELS = 6;
+
+  const getNormalizedGrind = (level: number, maxLevel: number) => {
+    if (maxLevel === STANDARD_GRIND_LEVELS) return level;
+    // Map range [1, maxLevel] to [1, STANDARD_GRIND_LEVELS]
+    const normalized = 1 + ((level - 1) * (STANDARD_GRIND_LEVELS - 1)) / (maxLevel - 1);
+    return Math.round(normalized);
+  };
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("coffee-theme");
     const savedSettings = localStorage.getItem("coffee-settings");
@@ -152,8 +161,8 @@ export default function Home() {
     const matchesGrind =
       grindSize === "any" ||
       (typeof grindSize === "number" &&
-        grindSize >= recipe.grindSizeRange[0] &&
-        grindSize <= recipe.grindSizeRange[1]);
+        getNormalizedGrind(grindSize, settings.grindLevels) >= recipe.grindSizeRange[0] &&
+        getNormalizedGrind(grindSize, settings.grindLevels) <= recipe.grindSizeRange[1]);
     
     // Check if user has ALL required equipment for the recipe
     const hasEquipment = !recipe.equipment || recipe.equipment.every((reqItem) => {
@@ -173,7 +182,8 @@ export default function Home() {
   });
 
   const getGrindSizeInfo = (level: number) => {
-    return coffeeData?.grindSizes.find((g) => g.level === level);
+    const normalized = getNormalizedGrind(level, settings.grindLevels);
+    return coffeeData?.grindSizes.find((g) => g.level === normalized);
   };
 
   const getCupTypeInfo = (id: string) => {
