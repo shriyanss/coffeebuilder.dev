@@ -32,6 +32,7 @@ interface Recipe {
   cupTypes: string[];
   grindSizeRange: number[];
   chocolate: boolean;
+  equipment: string[];
   proportions: Record<string, string>;
   instructions: string[];
   brewTime: string;
@@ -61,7 +62,23 @@ interface CoffeeData {
 interface SettingsConfig {
   grindLevels: number;
   defaultGrindSize: number;
+  availableEquipment: string[];
+  mokaSubstitute: boolean;
 }
+
+const ALL_EQUIPMENT = [
+  { id: "espresso-machine", name: "Espresso Machine" },
+  { id: "french-press", name: "French Press" },
+  { id: "pour-over", name: "Pour Over / Dripper" },
+  { id: "moka-pot", name: "Moka Pot" },
+  { id: "aeropress", name: "AeroPress" },
+  { id: "chemex", name: "Chemex" },
+  { id: "siphon", name: "Siphon" },
+  { id: "milk-frother", name: "Milk Frother" },
+  { id: "blender", name: "Blender" },
+  { id: "phin-filter", name: "Phin Filter" },
+  { id: "nitro-system", name: "Nitro System" },
+];
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -81,6 +98,8 @@ export default function Home() {
   const [settings, setSettings] = useState<SettingsConfig>({
     grindLevels: 6,
     defaultGrindSize: 3,
+    availableEquipment: ALL_EQUIPMENT.map(e => e.id),
+    mokaSubstitute: true,
   });
 
   useEffect(() => {
@@ -93,7 +112,11 @@ export default function Home() {
     
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings);
-      setSettings(parsed);
+      setSettings({
+        ...parsed,
+        availableEquipment: parsed.availableEquipment || ALL_EQUIPMENT.map((e: any) => e.id),
+        mokaSubstitute: parsed.mokaSubstitute ?? true,
+      });
       setGrindSize(parsed.defaultGrindSize);
     }
   }, []);
@@ -129,8 +152,22 @@ export default function Home() {
       (typeof grindSize === "number" &&
         grindSize >= recipe.grindSizeRange[0] &&
         grindSize <= recipe.grindSizeRange[1]);
+    
+    // Check if user has ALL required equipment for the recipe
+    const hasEquipment = !recipe.equipment || recipe.equipment.every((reqItem) => {
+      if (settings.availableEquipment.includes(reqItem)) return true;
+      // Allow Moka Pot as substitute for Espresso Machine if enabled
+      if (
+        reqItem === "espresso-machine" &&
+        settings.mokaSubstitute &&
+        settings.availableEquipment.includes("moka-pot")
+      ) {
+        return true;
+      }
+      return false;
+    });
 
-    return matchesMilk && matchesChocolate && matchesTemp && matchesCup && matchesGrind;
+    return matchesMilk && matchesChocolate && matchesTemp && matchesCup && matchesGrind && hasEquipment;
   });
 
   const getGrindSizeInfo = (level: number) => {
@@ -653,6 +690,74 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
+              <div>
+                <label className="mb-2 block text-sm font-medium">
+                  Available Equipment
+                </label>
+                <p className="mb-3 text-xs text-muted-foreground">
+                  Select the equipment you own to filter reachable recipes
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {ALL_EQUIPMENT.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        const newEquipment = settings.availableEquipment.includes(item.id)
+                          ? settings.availableEquipment.filter((id) => id !== item.id)
+                          : [...settings.availableEquipment, item.id];
+                        
+                        saveSettings({
+                          ...settings,
+                          availableEquipment: newEquipment,
+                        });
+                      }}
+                      className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-all ${
+                        settings.availableEquipment.includes(item.id)
+                          ? "border-primary bg-primary/5 text-primary"
+                          : "border-border bg-card text-muted-foreground hover:bg-muted"
+                      }`}
+                    >
+                      <div className={`flex h-4 w-4 items-center justify-center rounded border ${
+                        settings.availableEquipment.includes(item.id)
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-muted-foreground"
+                      }`}>
+                        {settings.availableEquipment.includes(item.id) && <Check className="h-3 w-3" />}
+                      </div>
+                      <span className="truncate">{item.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between rounded-lg border border-border p-3">
+                <div className="space-y-0.5">
+                  <label className="block text-sm font-medium">
+                    Moka Pot as Espresso
+                  </label>
+                  <p className="text-xs text-muted-foreground">
+                    Use Moka Pot for espresso recipes
+                  </p>
+                </div>
+                <button
+                  onClick={() =>
+                    saveSettings({
+                      ...settings,
+                      mokaSubstitute: !settings.mokaSubstitute,
+                    })
+                  }
+                  className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+                    settings.mokaSubstitute ? "bg-primary" : "bg-muted"
+                  }`}
+                >
+                  <span
+                    className={`pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform ${
+                      settings.mokaSubstitute ? "translate-x-5" : "translate-x-0"
+                    }`}
+                  />
+                </button>
+              </div>
+
               <div>
                 <label className="mb-2 block text-sm font-medium">
                   Grind Size Levels
